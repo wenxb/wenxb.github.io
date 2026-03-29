@@ -12,7 +12,7 @@
     "open": "搜索",
     "placeholder": "搜索文章、分类、标签、合集",
     "empty": "没有找到相关内容",
-    "clear": "清空",
+    "clear": "",
     "loadMore": "加载更多",
     "unavailable": "搜索索引暂时不可用。请先执行站点生成，或确认 Pagefind 已成功为输出目录建立索引。"
   },
@@ -40,12 +40,11 @@
   "home": {
     "aboutAuthor": "认识作者",
     "searchContent": "搜索内容",
-    "atAGlance": "快速概览",
+    "atAGlance": "概览",
     "articleCount": "文章数",
     "categoryCount": "分类数",
     "tagCount": "标签数",
     "author": "作者",
-    "articlesKicker": "文章",
     "latestPosts": "最新文章",
     "emptyTitle": "这里还没有已发布文章",
     "emptyBody": "默认主题已经准备好了，接下来只差把你的第一篇文章发布出来。"

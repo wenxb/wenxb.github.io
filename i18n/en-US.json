@@ -12,7 +12,7 @@
     "open": "Search",
     "placeholder": "Search posts, categories, tags, collections",
     "empty": "No results found",
-    "clear": "Clear",
+    "clear": "",
     "loadMore": "Load more",
     "unavailable": "Search index is unavailable right now. Generate the site first, or confirm that Pagefind has indexed the output directory."
   },
@@ -40,12 +40,11 @@
   "home": {
     "aboutAuthor": "Meet the author",
     "searchContent": "Search content",
-    "atAGlance": "At a glance",
+    "atAGlance": "Glance",
     "articleCount": "Posts",
     "categoryCount": "Categories",
     "tagCount": "Tags",
     "author": "Author",
-    "articlesKicker": "Articles",
     "latestPosts": "Latest posts",
     "emptyTitle": "No published posts yet",
     "emptyBody": "The default theme is ready. All that is missing now is your first published post."

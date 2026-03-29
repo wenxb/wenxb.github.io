@@ -24,7 +24,7 @@ export async function initSearch(modal) {
       translations: {
         placeholder: getText("search.placeholder", "搜索文章、分类、标签、合集"),
         zero_results: getText("search.empty", "没有找到相关内容"),
-        clear_search: getText("search.clear", "清空"),
+        clear_search: getText("search.clear", ""),
         load_more: getText("search.loadMore", "加载更多"),
       },
     });
