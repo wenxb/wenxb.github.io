@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Home",
+    "category": "Categories",
+    "collection": "Collections",
+    "tag": "Tags",
+    "about": "About"
+  },
+  "search": {
+    "kicker": "Search",
+    "title": "Search",
+    "open": "Search",
+    "placeholder": "Search posts, categories, tags, collections",
+    "empty": "No results found",
+    "clear": "Clear",
+    "loadMore": "Load more",
+    "unavailable": "Search index is unavailable right now. Generate the site first, or confirm that Pagefind has indexed the output directory."
+  },
+  "footer": {
+    "rss": "RSS",
+    "sitemap": "Sitemap",
+    "copy": "Generated with the goday default theme."
+  },
+  "console": {
+    "kicker": "Console",
+    "title": "Default theme console",
+    "runtime": "Runtime",
+    "site": "Site",
+    "route": "Route",
+    "theme": "Theme",
+    "pageType": "Page type",
+    "language": "UI language",
+    "mode": "Color mode",
+    "headings": "Headings",
+    "toggleTheme": "Toggle appearance"
+  },
+  "common": {
+    "articleCountSuffix": "posts"
+  },
+  "home": {
+    "aboutAuthor": "Meet the author",
+    "searchContent": "Search content",
+    "atAGlance": "At a glance",
+    "articleCount": "Posts",
+    "categoryCount": "Categories",
+    "tagCount": "Tags",
+    "author": "Author",
+    "articlesKicker": "Articles",
+    "latestPosts": "Latest posts",
+    "emptyTitle": "No published posts yet",
+    "emptyBody": "The default theme is ready. All that is missing now is your first published post."
+  },
+  "articleCard": {
+    "pinned": "Pinned",
+    "original": "Original"
+  },
+  "category": {
+    "index": {
+      "kicker": "Categories",
+      "title": "Categories",
+      "emptyTitle": "No public categories yet",
+      "emptyBody": "Once you publish posts, this page will start organizing them automatically."
+    },
+    "card": {
+      "kicker": "Category",
+      "emptyDescription": "This category does not have an extra description yet. Open it and go straight to the content.",
+      "enter": "Open category"
+    },
+    "detail": {
+      "kicker": "Category",
+      "emptyTitle": "This category is still empty",
+      "emptyBody": "After posts are published here, this page will automatically show the full list."
+    }
+  },
+  "collection": {
+    "index": {
+      "kicker": "Collections",
+      "title": "Collections",
+      "emptyTitle": "Collections are waiting for the first series",
+      "emptyBody": "Once you start grouping posts into a series, this page becomes a longer reading path."
+    },
+    "card": {
+      "kicker": "Collection",
+      "emptyDescription": "This is a set of posts meant to be read in sequence around one topic.",
+      "enter": "Start reading"
+    },
+    "detail": {
+      "kicker": "Collection",
+      "emptyTitle": "This collection has no public posts yet",
+      "emptyBody": "The collection is ready. Once you add posts, it will naturally turn into a complete reading path."
+    }
+  },
+  "tag": {
+    "index": {
+      "kicker": "Tags",
+      "title": "Tags",
+      "emptyTitle": "No tags yet",
+      "emptyBody": "Nothing to show for now."
+    },
+    "detail": {
+      "kicker": "Tag",
+      "emptyTitle": "No public posts under this tag yet",
+      "emptyBody": "You can come back later, or start exploring from the homepage first."
+    }
+  },
+  "post": {
+    "author": "Author",
+    "toc": "Table of contents",
+    "tocEmpty": "No headings are available for a table of contents yet.",
+    "topPosts": "Hot posts",
+    "topPostsEmpty": "Enable Umami and generate the site once, then this block will show the most visited posts automatically.",
+    "copyright": "Copyright",
+    "copyrightBody": "This article uses the default theme copyright block. Please keep the original link and credit the author when reposting or quoting.",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

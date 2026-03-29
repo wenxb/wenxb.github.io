@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "首页",
+    "category": "分类",
+    "collection": "合集",
+    "tag": "标签",
+    "about": "关于我"
+  },
+  "search": {
+    "kicker": "Search",
+    "title": "搜索",
+    "open": "搜索",
+    "placeholder": "搜索文章、分类、标签、合集",
+    "empty": "没有找到相关内容",
+    "clear": "清空",
+    "loadMore": "加载更多",
+    "unavailable": "搜索索引暂时不可用。请先执行站点生成，或确认 Pagefind 已成功为输出目录建立索引。"
+  },
+  "footer": {
+    "rss": "RSS",
+    "sitemap": "Sitemap",
+    "copy": "由 goday 默认主题生成。"
+  },
+  "console": {
+    "kicker": "Console",
+    "title": "控制台",
+    "runtime": "Runtime",
+    "site": "站点",
+    "route": "路径",
+    "theme": "主题",
+    "pageType": "页面类型",
+    "language": "界面语言",
+    "mode": "外观模式",
+    "headings": "标题数",
+    "toggleTheme": "切换外观"
+  },
+  "common": {
+    "articleCountSuffix": "篇文章"
+  },
+  "home": {
+    "aboutAuthor": "认识作者",
+    "searchContent": "搜索内容",
+    "atAGlance": "快速概览",
+    "articleCount": "文章数",
+    "categoryCount": "分类数",
+    "tagCount": "标签数",
+    "author": "作者",
+    "articlesKicker": "文章",
+    "latestPosts": "最新文章",
+    "emptyTitle": "这里还没有已发布文章",
+    "emptyBody": "默认主题已经准备好了，接下来只差把你的第一篇文章发布出来。"
+  },
+  "articleCard": {
+    "pinned": "置顶",
+    "original": "原创"
+  },
+  "category": {
+    "index": {
+      "kicker": "分类",
+      "title": "分类",
+      "emptyTitle": "还没有公开分类内容",
+      "emptyBody": "一旦有文章发布，分类页会自动开始组织内容。"
+    },
+    "card": {
+      "kicker": "分类",
+      "emptyDescription": "这个分类还没有额外描述，点进去看看内容本身。",
+      "enter": "进入分类"
+    },
+    "detail": {
+      "kicker": "分类",
+      "emptyTitle": "这个分类暂时还是空的",
+      "emptyBody": "等文章发布到这里后，这一页会自动呈现完整列表。"
+    }
+  },
+  "collection": {
+    "index": {
+      "kicker": "合集",
+      "title": "合集",
+      "emptyTitle": "合集页还在等待第一组内容",
+      "emptyBody": "当你开始把多篇文章组织成系列，这里会成为更长线的阅读入口。"
+    },
+    "card": {
+      "kicker": "合集",
+      "emptyDescription": "这是一组按主题连续阅读的文章集合。",
+      "enter": "开始阅读"
+    },
+    "detail": {
+      "kicker": "合集",
+      "emptyTitle": "这个合集暂时还没有公开内容",
+      "emptyBody": "合集已经建好，等你把文章补进来，它会自然变成一条完整的阅读路径。"
+    }
+  },
+  "tag": {
+    "index": {
+      "kicker": "标签",
+      "title": "标签",
+      "emptyTitle": "还没有标签",
+      "emptyBody": "暂时没有可显示的内容。"
+    },
+    "detail": {
+      "kicker": "标签",
+      "emptyTitle": "这个标签下还没有公开文章",
+      "emptyBody": "你可以稍后再来，或者先从首页开始浏览其他内容。"
+    }
+  },
+  "post": {
+    "author": "作者信息",
+    "toc": "目录",
+    "tocEmpty": "当前文章还没有可生成目录的标题。",
+    "topPosts": "热门文章",
+    "topPostsEmpty": "启用 Umami 并完成一次站点生成后，这里会自动展示访问量最高的文章。",
+    "copyright": "版权说明",
+    "copyrightBody": "本文采用默认主题版权提示块。转载、引用或二次分发时，请保留原文链接并注明作者与出处。",
+    "prev": "上一篇",
+    "next": "下一篇"
+  }
+}
