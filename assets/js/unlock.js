@@ -1,6 +1,6 @@
 const FAILURE_LIMIT = 3;
 const LOCK_SECONDS = 30;
-const SUBMIT_IDLE_TEXT = "验证并解锁";
+const SUBMIT_IDLE_TEXT = "立即查看";
 const SUBMIT_BUSY_TEXT = "验证中...";
 
 bootProtectedArticles();
@@ -22,7 +22,8 @@ function bootProtectedArticles() {
 }
 
 function createState(root) {
-  const articleId = root.dataset.articleId || "";
+  const articleSlug = root.dataset.articleSlug || "";
+  const legacyArticleId = root.dataset.articleId || "";
   const version = root.dataset.articleVersion || "";
   const workerUrl = root.dataset.workerUrl || "";
   const cipher = root.dataset.cipher || "";
@@ -35,7 +36,7 @@ function createState(root) {
   const status = root.querySelector("[data-password-status]");
 
   if (
-    !articleId ||
+    (!articleSlug && !legacyArticleId) ||
     !version ||
     !workerUrl ||
     !cipher ||
@@ -49,8 +50,11 @@ function createState(root) {
     return null;
   }
 
+  const articleKey = articleSlug || legacyArticleId;
   return {
-    articleId,
+    articleKey,
+    articleSlug,
+    legacyArticleId,
     version,
     workerUrl,
     cipher,
@@ -81,13 +85,13 @@ function bindProtectedArticle(state) {
 }
 
 async function tryRestoreFromCache(state) {
-  const cached = readCachedKey(state.articleId);
+  const cached = readCachedKey(state.articleKey);
   if (!cached) {
     return;
   }
 
   if (cached.version !== state.version || cached.expiresAt <= Date.now()) {
-    clearCachedKey(state.articleId);
+    clearCachedKey(state.articleKey);
     return;
   }
 
@@ -97,13 +101,13 @@ async function tryRestoreFromCache(state) {
     setStatus(state, "");
   } catch (error) {
     console.warn("restore protected article failed", error);
-    clearCachedKey(state.articleId);
+    clearCachedKey(state.articleKey);
     setStatus(state, "");
   }
 }
 
 async function handleUnlock(state) {
-  if (isCooldownActive(state.articleId)) {
+  if (isCooldownActive(state.articleKey)) {
     applyCooldownState(state);
     return;
   }
@@ -126,7 +130,8 @@ async function handleUnlock(state) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        articleId: state.articleId,
+        articleSlug: state.articleSlug,
+        articleId: state.legacyArticleId,
         password,
       }),
     });
@@ -137,9 +142,9 @@ async function handleUnlock(state) {
       return;
     }
 
-    clearFailureState(state.articleId);
+    clearFailureState(state.articleKey);
     const expiresAt = Date.now() + Math.max(state.cacheTtl, 0) * 1000;
-    writeCachedKey(state.articleId, {
+    writeCachedKey(state.articleKey, {
       decryptKey: payload.decryptKey,
       expiresAt,
       version: state.version,
@@ -192,7 +197,7 @@ function handleUnlockFailure(state, message) {
   state.input.value = "";
   state.input.focus();
 
-  const failureState = recordFailure(state.articleId);
+  const failureState = recordFailure(state.articleKey);
   setError(state, message);
   if (failureState.lockedUntil > Date.now()) {
     applyCooldownState(state);
@@ -219,10 +224,10 @@ function setStatus(state, message) {
 }
 
 function applyCooldownState(state) {
-  const failureState = readFailureState(state.articleId);
+  const failureState = readFailureState(state.articleKey);
   if (!failureState || failureState.lockedUntil <= Date.now()) {
     if (failureState) {
-      clearFailureState(state.articleId);
+      clearFailureState(state.articleKey);
     }
     setBusy(state, false);
     setStatus(state, "");

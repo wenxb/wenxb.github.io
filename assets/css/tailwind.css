@@ -102,7 +102,6 @@ body {
 
 .theme-modal-panel {
   border-radius: var(--goday-card-radius);
-  overflow: hidden;
   transform: translateY(10px) scale(0.985);
   opacity: 0;
   transition: transform 150ms ease, opacity 150ms ease;
@@ -110,12 +109,67 @@ body {
 
 .theme-search-panel {
   border-color: rgba(226, 232, 240, 0.9);
-  background: rgba(248, 250, 252, 0.98);
+  background: rgba(248, 250, 252, 0.96);
 }
 
 [data-theme="dark"] .theme-search-panel {
   border-color: rgba(63, 63, 70, 0.95);
-  background: rgba(18, 18, 20, 0.96);
+  background: rgba(24, 24, 27, 0.94);
+}
+
+.goday-protected-input {
+  min-height: 2.75rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 1rem;
+  background: rgb(255 255 255);
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  color: rgb(15 23 42);
+  outline: none;
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.goday-protected-input:focus {
+  border-color: rgb(253 186 116);
+}
+
+[data-theme="dark"] .goday-protected-input {
+  border-color: rgb(63 63 70);
+  background: rgb(9 9 11);
+  color: rgb(255 255 255);
+}
+
+.goday-protected-submit {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgb(2 6 23);
+  padding-inline: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255 255 255);
+  transition: background-color 150ms ease, color 150ms ease, opacity 150ms ease;
+}
+
+.goday-protected-submit:hover {
+  background: rgb(30 41 59);
+}
+
+.goday-protected-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .goday-protected-submit {
+  background: rgb(2 6 23);
+  color: rgb(255 255 255);
+}
+
+[data-theme="dark"] .goday-protected-submit:hover {
+  background: rgb(30 41 59);
+  color: rgb(255 255 255);
 }
 
 .theme-modal[data-open="true"] .theme-modal-panel {
@@ -124,8 +178,7 @@ body {
 }
 
 .prose {
-  max-width: none;
-  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", ui-serif, Georgia, serif;
+  max-width: 100%;
 }
 
 .prose :where(h1, h2, h3, h4) {
@@ -220,7 +273,7 @@ body {
 .pagefind-ui__search-input {
   border-radius: 999px;
   min-height: 3.25rem;
-  background: rgba(248, 250, 252, 0.98);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .pagefind-ui__search-input::placeholder {
@@ -274,7 +327,7 @@ body {
 }
 
 [data-theme="dark"] .pagefind-ui__search-input {
-  background: rgba(18, 18, 20, 0.96);
+  background: rgba(39, 39, 42, 0.92);
 }
 
 [data-theme="dark"] .pagefind-ui__search-input::placeholder {
